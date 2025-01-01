@@ -15,7 +15,7 @@ nav {
     justify-content: center; 
     padding: 0 2rem; 
     height: 14vh;
-    background-color: #fafbfb;
+    background-color: #f1fdfd;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
     
 }
@@ -29,6 +29,7 @@ nav {
 .logoImg {
     position: absolute;
     left: 2rem;
+    top: -1rem;
     width: 130px; 
 }
 
