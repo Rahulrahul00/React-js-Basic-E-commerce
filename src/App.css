@@ -15,7 +15,7 @@ nav {
     justify-content: center; 
     padding: 0 2rem; 
     height: 14vh;
-    background-color: #f1fdfd;
+    background-color: #f7fafa;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
     
 }
@@ -57,7 +57,7 @@ nav {
 }
 /* Optional hover effect */
 .navList li a:hover {
-    color: #208760; 
+    color: #26966b; 
     text-decoration: underline; 
     transition: all 0.3s ease;
   

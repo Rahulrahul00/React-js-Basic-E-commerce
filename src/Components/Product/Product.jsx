@@ -7,18 +7,19 @@ const Product = () => {
 
   const [filterProduct, setFilterProduct] = useState(dataProduct);
 
-  const handleFilter=(e)=>{
-    const filterValue = e.target.value;
+      const handleFilter=({target})=>{
+          const filterValue = target.value;
+            if(filterValue === "greaterThan20"){
+              setFilterProduct(dataProduct.filter((product)=> product.price > 20));
+            }else if(filterValue === "lessThan20"){
+              setFilterProduct(dataProduct.filter((product)=> product.price <= 20));
+            }else{
+              setFilterProduct(dataProduct);
+            }
 
-    if(filterValue === "greaterThan20"){
-      setFilterProduct(dataProduct.filter((product)=> product.price >20));
-    }else if(filterValue == "lessThan20"){
-      setFilterProduct(dataProduct.filter((product)=> product.price <=20));
-    }else{
-      setFilterProduct(dataProduct);
-    }
-      console.log(filterProduct);
-    }
+            //  console.log(filterValue);
+      }
+ 
   
 
   
@@ -31,17 +32,19 @@ const Product = () => {
       {/* Search Box */}
       <div className="searchBox">
         <input type="search" />
-        <label >Search</label>
+        <label className='searchName'>Search</label>
       </div>
       {/* Fliter Dropdown */}
-       <div>
-        <label>Filter</label>
-        <select onChange={handleFilter}>
-          <option value='all'>All</option>
+      <div className='filterContainer'>
+        <label className='filterName'>Filter</label>
+        <select className='filterSelect' onChange={handleFilter}>
+          <option value="all">All</option>
           <option value="greaterThan20">Greater than 20</option>
           <option value="lessThan20">Less than 20</option>
         </select>
-       </div>
+
+      </div>
+       
 
       <div className="card-container">
         {filterProduct.map((item)=>(
