@@ -47,7 +47,38 @@ nav {
     list-style: none;
     gap: 2rem;
 }
+.cart{
+    display: flex;
+    position: absolute;
+    right: 15rem;
+   
+}
+.cartIcon{
+    color: #18855b;
+    margin-left: 2rem;
 
+}
+.cartCount{
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background-color: #fe4444;
+    color: #ffffff;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:"Roboto", serif;
+    font-size: 0.8rem;
+    position: absolute;
+    left: 3.3rem;
+    bottom: 1.4rem;
+}
+.userIcon{
+    position: absolute;
+    right: 5rem;
+    
+}
 .navList a {
     text-decoration: none;
     color: rgb(53, 50, 50);
