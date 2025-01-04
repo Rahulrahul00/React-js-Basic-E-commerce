@@ -7,7 +7,8 @@ const ProductCard = ({ props }) => {
   return (
     <div className="product-details">
       <div className="product-img">
-        <img src={image} alt={title} />
+   
+        <img src={image} alt="" />
       </div>
       <div className="productName">
         <h1>{brand}</h1>
