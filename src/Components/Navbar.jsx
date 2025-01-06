@@ -37,7 +37,7 @@ const Navbar = () => {
         </div>
 
         <div className="userIcon">
-        <FaUser size={25}/>
+        <FaUser className='user' size={18}/>
         </div>
       </nav>
 

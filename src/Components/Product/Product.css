@@ -4,6 +4,7 @@
   width: 100%;
   background-color: #ffffff;
   position: relative;
+ 
 }
 
 .card-container {
@@ -16,7 +17,7 @@
 
 .product-details {
   width: 220px;
-  height: 60vh;
+  height: 63vh;
   border: 1px solid #d2cfcf;
   border-radius: 5px;
   overflow: hidden;
@@ -47,13 +48,14 @@
 }
 .description {
   align-items: flex-start;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   color: #6f6c6c;
 }
 .price {
   color: #00433d;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
+  /* margin-bottom: 1rem; */
+  font-size: 0.87rem;
+  margin-top: 1.3rem;
 }
 .pHead {
   color: #023c26;
@@ -61,7 +63,7 @@
 }
 .headLine {
   position: absolute;
-  left: 19.3rem;
+  left: 19.8rem;
   top: 1.2rem;
   width: 50px;
   height: 5px;
@@ -143,4 +145,27 @@ section option:hover {
 }
 .filterSelect {
   margin-right: 1rem;
+}
+.buttonCart{
+  position: relative;
+  cursor: pointer;
+}
+.buttonCartIcon{
+  position: absolute;
+  right: 2rem;
+  bottom: 0.01rem;
+  width: 90px;
+  height: 25px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background-color: #7bdab5;
+  font-weight: 500;
+  color: #2d3232;
+  transition:0.3s ease-in-out;
+}
+.buttonCartIcon:hover{
+  background-color: #54cd9e;
 }

@@ -7,7 +7,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
 }
+
 
 nav {
     display: flex;
@@ -51,12 +54,13 @@ nav {
     display: flex;
     position: absolute;
     right: 15rem;
+    cursor: pointer;
    
 }
 .cartIcon{
     color: #18855b;
     margin-left: 2rem;
-
+    cursor: pointer;
 }
 .cartCount{
     width: 20px;
@@ -77,8 +81,20 @@ nav {
 .userIcon{
     position: absolute;
     right: 5rem;
-    
+    /* top: 1rem; */
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    color: #f7fafa;
+    background-color: #26966b;
+    cursor: pointer;
 }
+.user{
+    position: absolute;
+    left: 0.35rem;
+    top: 0.28rem;
+}
+
 .navList a {
     text-decoration: none;
     color: rgb(53, 50, 50);

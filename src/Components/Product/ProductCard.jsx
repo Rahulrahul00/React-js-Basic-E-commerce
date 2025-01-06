@@ -1,5 +1,7 @@
 import React from 'react';
 import './product.css';
+import { FaCirclePlus } from "react-icons/fa6";
+
 
 const ProductCard = ({ props }) => {
   const { image, title, brand, description, price } = props;
@@ -18,6 +20,9 @@ const ProductCard = ({ props }) => {
       </div>
       <div className="price">
         <h3>Rs.{price}</h3>
+      </div>
+      <div className="buttonCart">
+        <button className='buttonCartIcon'>Add to cart</button>
       </div>
     </div>
   );

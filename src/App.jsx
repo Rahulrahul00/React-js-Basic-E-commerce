@@ -9,6 +9,7 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import Product from './Components/Product/Product';
 import Service from './Components/Service';
+import Footer from './Components/Footer/Footer';
 
 
 
@@ -34,7 +35,7 @@ function App() {
      </Routes>
 
 </Router>
-   
+   <Footer/>
    </>
     
    
