@@ -38,11 +38,11 @@
 .price {
   margin: 3px 0 0 20px;
 }
-.productName {
+/* .productName {
   font-size: 0.7rem;
   color: #156269;
   font-weight: 600;
-}
+} */
 .product-img img:hover {
   transform: scale(1.1);
 }
@@ -51,19 +51,19 @@
   font-size: 0.8rem;
   color: #6f6c6c;
 }
-.price {
+/* .price {
   color: #00433d;
-  /* margin-bottom: 1rem; */
+  
   font-size: 0.87rem;
   margin-top: 1.3rem;
-}
+} */
 .pHead {
   color: #023c26;
   margin: 3rem 0 0 3rem;
 }
 .headLine {
   position: absolute;
-  left: 19.8rem;
+  left: 19rem;
   top: 1.2rem;
   width: 50px;
   height: 5px;
@@ -77,7 +77,7 @@
   justify-content: center;
   margin-bottom: 2rem;
 }
-.searchBox input {
+/* .searchBox input {
   width: 300px;
   height: 33px;
   border-radius: 2rem;
@@ -89,7 +89,7 @@
   font-weight: 500;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-}
+} */
 
 .searchName {
   font-size: 1.15rem;

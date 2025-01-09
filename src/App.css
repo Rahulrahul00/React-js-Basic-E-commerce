@@ -19,6 +19,7 @@ nav {
     padding: 0 2rem; 
     height: 14vh;
     background-color: #f7fafa;
+    /* background-image: linear-gradient(to bottom, #bbf1f4, #b4e2fc, #bde9f6, #b7e8ef, #9df4f3); */
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
     
 }
@@ -39,7 +40,7 @@ nav {
 .logoName {
     font-family: "Spicy Rice", serif;
     font-size: 1.5rem;
-    color: #26966b;
+    color: #0b905d;
     position: absolute;
     left: 5rem;
     top: 2rem;
@@ -104,7 +105,7 @@ nav {
 }
 /* Optional hover effect */
 .navList li a:hover {
-    color: #26966b; 
+    color: #038754; 
     text-decoration: underline; 
     transition: all 0.3s ease;
   

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as  Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import './Components/Product/Product';
 
@@ -10,35 +10,39 @@ import Contact from './Components/Contact';
 import Product from './Components/Product/Product';
 import Service from './Components/Service';
 import Footer from './Components/Footer/Footer';
+import ProductDetails from './Components/Product/ProductDetails';
+
 
 
 
 function App() {
-  
+
+
 
   return (
 
-    
-   <>
-   
-   <Router>
-     <Navbar/>
-    
-     <Routes>
-       
-       <Route path='/' element={<Home/>}/>
-       <Route path='/About' element={<About/>}/>
-       <Route path='/Contact' element={<Contact/>}/>
-       <Route path='/Product' element={<Product/>}/>
-       <Route path='/Service' element={<Service/>}/>
+    <>
 
-     </Routes>
+      <Router>
+        <Navbar />
 
-</Router>
-   <Footer/>
-   </>
-    
-   
+        <Routes>
+
+          <Route path='/' element={<Home />} />
+          <Route path='/About' element={<About />} />
+          <Route path='/Contact' element={<Contact />} />
+          <Route path='/Product' element={<Product />} />
+          <Route path='/Service' element={<Service />} />
+
+          <Route path='/ProductDetails/:id' element={<ProductDetails/>} />
+
+        </Routes>
+
+      </Router>
+      <Footer />
+    </>
+
+
   )
 }
 

@@ -85,7 +85,7 @@ const Footer = () => {
    </ul>
 
   <div class="col-md-12 bottomDiv">
-    <h6 class="text-center" >Copyright ⓒ All rights reserved by: <span class="webName2">Shop</span>Tym</h6>
+    <h6 class="text-center text-[0.8rem]" >Copyright ⓒ All rights reserved by: <span class="webName2">Shop</span>Tym</h6>
 
    </div>
 </footer>
