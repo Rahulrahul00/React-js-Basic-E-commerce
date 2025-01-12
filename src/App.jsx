@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import './Components/Product/Product';
@@ -11,32 +11,48 @@ import Product from './Components/Product/Product';
 import Service from './Components/Service';
 import Footer from './Components/Footer/Footer';
 import ProductDetails from './Components/Product/ProductDetails';
+import Categories from './Components/Categories/Categories';
 
 
 
 
 function App() {
 
+  const [selectedCategory, setSelectedCatgory] = useState("");
 
+  const handleCategorySelect=(category)=>{
+    // console.log(category);
+    setSelectedCatgory(category);
+  }
 
+ 
+  
   return (
 
     <>
 
       <Router>
         <Navbar />
-
+        <Home/>
+        <About/>
+        <Categories onCategorySelect={handleCategorySelect}/>
+       
+  
+       
         <Routes>
-
+          
           <Route path='/' element={<Home />} />
           <Route path='/About' element={<About />} />
+          
           <Route path='/Contact' element={<Contact />} />
-          <Route path='/Product' element={<Product />} />
+          <Route path='/Product' element={<Product/>} />
           <Route path='/Service' element={<Service />} />
 
           <Route path='/ProductDetails/:id' element={<ProductDetails/>} />
 
         </Routes>
+       
+        
 
       </Router>
       <Footer />
