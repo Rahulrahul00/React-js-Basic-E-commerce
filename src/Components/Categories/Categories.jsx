@@ -8,7 +8,9 @@ import './Categories.css';
 
 
 
-const Categories = () => {
+const Categories = ({onCategorySelect}) => {
+
+
 
 
   const catData = [
@@ -36,19 +38,19 @@ const Categories = () => {
       name: 'Appliances',
       img: "https://png.pngtree.com/png-clipart/20240505/original/pngtree-home-appliance-store-set-png-image_15016826.png",
     },
-   
+
   ];
 
   const settings = {
     dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 2,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  pauseOnHover: true, // Pause when hovered
- 
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 2,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true, // Pause when hovered
+
 
   };
 
@@ -56,11 +58,11 @@ const Categories = () => {
     <div>
       <div className="cateContainer">
         <div className="cateProductContainer flex align-middle justify-center ">
-          <div className="cateProducts w-1/3">
+          <div className="cateProducts w-1/3 cursor-pointer">
             <Slider {...settings}>
-              {catData.map((item,index) => (
+              {catData.map((item, index) => (
                 <div key={index}>
-                  <div className="product1 w-20 h-20 mt-10  rounded-full">
+                  <div onClick={()=>onCategorySelect(item.name)} className="product1 w-20 h-20 mt-10 rounded-full">
                     <img src={item.img} alt="Category Image" />
                     <p className='text-center'>{item.name}</p>
                   </div>
@@ -68,6 +70,7 @@ const Categories = () => {
               ))}
 
             </Slider>
+
           </div>
         </div>
       </div>

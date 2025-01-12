@@ -18,19 +18,24 @@ import Categories from './Components/Categories/Categories';
 
 function App() {
 
+
   const [selectedCategory, setSelectedCatgory] = useState("");
+
+
 
   const handleCategorySelect=(category)=>{
     // console.log(category);
     setSelectedCatgory(category);
   }
 
- 
-  
+
+//  console.log(selectedCategory);
+
+
   return (
 
     <>
-
+      
       <Router>
         <Navbar />
         <Home/>
@@ -45,7 +50,11 @@ function App() {
           <Route path='/About' element={<About />} />
           
           <Route path='/Contact' element={<Contact />} />
+
           <Route path='/Product' element={<Product/>} />
+
+         
+
           <Route path='/Service' element={<Service />} />
 
           <Route path='/ProductDetails/:id' element={<ProductDetails/>} />
@@ -55,6 +64,7 @@ function App() {
         
 
       </Router>
+      
       <Footer />
     </>
 
