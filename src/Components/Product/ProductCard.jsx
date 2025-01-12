@@ -27,7 +27,7 @@ const ProductCard = ({ props }) => {
         <h1 className='text-[1.2rem] text-[#156269] font-semibold'>{brand}</h1>
       </div>
       <div className="description">
-        <p className='cursor-pointer'>{description.length > 50 ? `${description.substring(0, 50)}  ...more` : description}</p>
+        <p className='cursor-pointer'>{description.length > 50 ? `${description.substring(0, 35)}  ...more` : description}</p>
       </div>
       <div className="price">
         <h3 className='text-[0.9rem] font-semibold text-[#00433d] mt-5'>Rs.{price}</h3>
