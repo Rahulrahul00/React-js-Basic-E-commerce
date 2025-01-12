@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './product.css';
 // import dataProduct from '../../assets/data';
 import axios from "axios";
 import ProductCard from './ProductCard'; // Import the child component
 import Loader from "react-js-loader";
+import CategoryContext from '../../Context/CategoryContext';
 
 
 const Product = () => {
 
-  const [products, setProduct] = useState([]);
-  const [filterProduct, setFilterProduct] = useState([]);
+  // const [products, setProduct] = useState([]);
+  const {products, setProducts,filterProduct,setFilterProduct}=useContext(CategoryContext)
+  // const [filterProduct, setFilterProduct] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError]  = useState(null);
   // const [search, setSearch] = useState(''); 
@@ -20,8 +22,8 @@ const Product = () => {
     axios.get('https://fakestoreapi.in/api/products?limit=50')
     
     .then(response=>{
-     console.log(response.status)
-     setProduct(response.data.products);
+     console.log(response.dataproducts)
+     setProducts(response.data.products);
      setFilterProduct(response.data.products);
      setLoading(false);
      // console.log(setProduct)

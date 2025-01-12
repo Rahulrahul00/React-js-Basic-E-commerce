@@ -12,27 +12,18 @@ import Service from './Components/Service';
 import Footer from './Components/Footer/Footer';
 import ProductDetails from './Components/Product/ProductDetails';
 import Categories from './Components/Categories/Categories';
+import { CategoryContextProvider } from './Context/CategoryContext';
 
 
 
 
 function App() {
 
- const [selectedCategory, setSelectedCategory ]= useState("")
-
-
-//  console.log(selectedCategory);
-
- const  handleCatSelect=(category)=>{
-   setSelectedCategory(category);
-
-  }
-
+ 
   return (
 
-    <>
-      
-      <Router>
+ <CategoryContextProvider>
+   <Router>
         <Navbar />
 
         <Routes>
@@ -40,15 +31,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/About' element={<About />} />
           <Route path='/Contact' element={<Contact />} />
-          <Route
-            path='/Product'
-            element={
-              <>
-                <Categories onCategorySelect={handleCatSelect} />
-                <Product selectedCategory={selectedCategory} />
-              </>
-            }
-          />
+          <Route path='/Product'element={<Product/>}/>
           <Route path='/Service' element={<Service />} />
 
           <Route path='/ProductDetails/:id' element={<ProductDetails/>} />
@@ -58,7 +41,7 @@ function App() {
       </Router>
       
       <Footer />
-    </>
+ </CategoryContextProvider>
 
 
   )

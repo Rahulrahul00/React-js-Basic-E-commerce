@@ -7,6 +7,13 @@ const ProductDetails = () => {
     const { id } = useParams();
 
     const [productDetails, setProductDetails] = useState("");
+    const [lengths,setLengths]=useState(300)
+    // description more funtion
+    const handleClickMore=()=>{
+        setLengths((prev)=>{
+            return prev === 300 ? 1000 : 300
+        })
+    }
 
     const fetchProductDetails = async () => {
         try {
@@ -60,16 +67,17 @@ const ProductDetails = () => {
                     <p className="text-gray-600">Category:</p>
                     <p>{productDetails.category || "N/A"}</p>
                     <p className="text-gray-600">Description:</p>
-                    <p>{productDetails.description || "N/A"}</p>
+                    <p className='cursor-pointer'>{productDetails.description && productDetails.description.substring(0, lengths)}<span onClick={handleClickMore}>{lengths===300 ? ' ...More' : ' ...Less'}</span> </p>
                 </div>
             </div>
         </div>
     </div>
-    
-    
-    
 
+    
+    
     )
+
+    
 }
 
 
