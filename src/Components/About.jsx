@@ -7,11 +7,7 @@ const About = () => {
       <h1 className='text-4xl font-bold text-green-700 mr-4'>About Us</h1>
       <div className="aboutLine bg-green-700 w-16 h-1"></div>
     </div>
-   
-  {/* <div className="flex items-center justify-center mb-8">
-    <h1 className="text-4xl font-bold text-green-700 mr-4">About Us</h1>
-    <div className="aboutLine bg-green-600 h-1 w-16"></div>
-  </div> */}
+
   <div className="about-content flex flex-col md:flex-row items-center justify-center">
     <div className="about-text text-gray-700 text-lg leading-relaxed md:w-1/2 mb-6 md:mb-0 px-4">
       <p>
