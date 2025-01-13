@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import catImg from '../../assets/images/cateImg.png'; // Import image
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import './Categories.css';
+import CategoryContext from '../../Context/CategoryContext';
 
 
 
-const Categories = ({onCategorySelect}) => {
+const Categories = () => {
+  const {products,setFilterProduct}=useContext(CategoryContext)
 
+  const handleCateoryClick = (category) =>{
+    setFilterProduct(products.filter((product)=> product.category.toLowerCase() == category.toLowerCase()));
+  }
+// useEffect(()=>{
+//   console.log('object',products)
+// },[products])
 
 
 
@@ -62,7 +70,7 @@ const Categories = ({onCategorySelect}) => {
             <Slider {...settings}>
               {catData.map((item, index) => (
                 <div key={index}>
-                  <div onClick={()=>onCategorySelect(item.name)} className="product1 w-20 h-20 mt-10 rounded-full">
+                  <div onClick={()=>handleCateoryClick(item.name)} className="product1 w-20 h-20 mt-10 rounded-full">
                     <img src={item.img} alt="Category Image" />
                     <p className='text-center'>{item.name}</p>
                   </div>
